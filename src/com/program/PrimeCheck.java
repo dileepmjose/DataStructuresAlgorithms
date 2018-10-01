@@ -1,27 +1,31 @@
-package com.program;
-public class PrimeCheck {
 
-	public static void main(String[] args) {
-		printPimeNumbers(100);
-	}
-
-	public static void printPimeNumbers(int number) {
-		boolean flag;
-		for (int j = 1; j <= number; j++) {
-			if(isPrime(j)){				
-				System.out.println(j);
-			}
-			
-		}
-	}
-	
-	public static boolean isPrime(int number) {
-		for (int i = 2; i < number; i++) {
-			if (number % i == 0) {
-				return false;
-			}
-		}
-		return true;
-	}
-
-}
+import java.util.*; 
+  
+class PrimeCheck { 
+      
+    
+    static boolean isPrime(int n) 
+    { 
+        // Corner case 
+        if (n <= 1) 
+            return false; 
+       
+        // Check from 2 to n-1 
+        for (int i = 2; i < n; i++) 
+            if (n % i == 0) 
+                return false; 
+       
+        return true; 
+    } 
+      
+    /* Driver program  */
+    public static void main(String[] args)  
+    { 
+         if(isPrime(11))  
+         System.out.println(" true") ; 
+          
+         else 
+         System.out.println(" false"); 
+           
+    } 
+} 
